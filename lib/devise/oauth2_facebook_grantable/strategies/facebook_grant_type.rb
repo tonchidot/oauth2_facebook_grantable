@@ -19,7 +19,8 @@ module Devise
              resource = mapping.to.find_for_authentication(:email => fb_user["email"].to_s)
              if(resource)
                Devise::Oauth2ProvidableFacebook.logger.debug("Oauth2FacebookGrantTypeStrategy => Found user with email:\"#{fb_user["email"]}\" saving facebook_idenfier: #{fb_user["id"]}")
-               resource.facebook_identifier = fb_user["id"].to_s
+               resource.facebook_identifier   = fb_user["id"].to_s
+               resource.facebook_access_token = params[:facebook_access_token]
                resource.save
              end
            end
