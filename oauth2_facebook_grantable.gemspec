@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here; for example:
   s.add_runtime_dependency "koala", "~> 1.11.0rc"
-  s.add_runtime_dependency "devise_oauth2_providable", "~> 1.1.0"
+  s.add_runtime_dependency "mustwin_devise_oauth2_providable", "~> 1.1.0"
   s.files         = `git ls-files`.split("\n")
 
   s.test_files    = `git ls-files -- {tests,spec,features}/*`.split("\n")
